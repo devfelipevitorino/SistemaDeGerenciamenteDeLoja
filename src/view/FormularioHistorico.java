@@ -51,7 +51,7 @@ public class FormularioHistorico extends javax.swing.JFrame {
         setTitle("Histórico de Vendas");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Noto Sans Lisu", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -74,8 +74,12 @@ public class FormularioHistorico extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Consulta por data", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Noto Sans Lisu", 1, 12))); // NOI18N
 
+        jLabel2.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("Data Inicio");
 
+        jLabel3.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
         jLabel3.setText("Data Fim");
 
         try {
@@ -90,6 +94,9 @@ public class FormularioHistorico extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        btnPesquisarVenda.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        btnPesquisarVenda.setForeground(new java.awt.Color(102, 102, 102));
+        btnPesquisarVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
         btnPesquisarVenda.setText("Pesquisar");
         btnPesquisarVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +119,7 @@ public class FormularioHistorico extends javax.swing.JFrame {
                 .addComponent(txtFim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnPesquisarVenda)
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtFim, txtInicio});
@@ -165,7 +172,7 @@ public class FormularioHistorico extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tb, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE))
+                .addComponent(tb, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE))
         );
 
         pack();

@@ -89,11 +89,14 @@ public class FormularioEstoque extends javax.swing.JDialog {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Noto Sans Lisu", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Estoque");
 
         painel_guias.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Noto Sans Lisu", 1, 14))); // NOI18N
 
+        jLabel2.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("Codigo");
 
         txtCodigo.setEditable(false);
@@ -103,6 +106,8 @@ public class FormularioEstoque extends javax.swing.JDialog {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
         jLabel3.setText("Descrição");
 
         txtDescricao.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +121,9 @@ public class FormularioEstoque extends javax.swing.JDialog {
             }
         });
 
+        btnPesquisar.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnPesquisar.setForeground(new java.awt.Color(102, 102, 102));
+        btnPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
         btnPesquisar.setText("Pesquisar");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +136,8 @@ public class FormularioEstoque extends javax.swing.JDialog {
             }
         });
 
+        jLabel17.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(102, 102, 102));
         jLabel17.setText("Quantidade Atual");
 
         txtQtdAtual.addActionListener(new java.awt.event.ActionListener() {
@@ -152,6 +162,8 @@ public class FormularioEstoque extends javax.swing.JDialog {
             }
         });
 
+        jLabel18.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(102, 102, 102));
         jLabel18.setText("Qtd.:");
 
         tabela.setModel(new javax.swing.table.DefaultTableModel(
@@ -195,6 +207,8 @@ public class FormularioEstoque extends javax.swing.JDialog {
         );
 
         btnAdicionar.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnAdicionar.setForeground(new java.awt.Color(102, 102, 102));
+        btnAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add1.png"))); // NOI18N
         btnAdicionar.setText("Adicionar");
         btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,44 +228,49 @@ public class FormularioEstoque extends javax.swing.JDialog {
                     .addComponent(jLabel17))
                 .addGap(18, 18, 18)
                 .addGroup(painel_estoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painel_estoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(painel_estoqueLayout.createSequentialGroup()
-                            .addComponent(txtQtdAtual, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(60, 60, 60)
-                            .addComponent(jLabel18)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(txtQtdNova, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnAdicionar))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painel_estoqueLayout.createSequentialGroup()
-                            .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnPesquisar)))
+                    .addGroup(painel_estoqueLayout.createSequentialGroup()
+                        .addComponent(txtQtdAtual, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtQtdNova, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(painel_estoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnAdicionar)
+                    .addComponent(btnPesquisar))
+                .addContainerGap(223, Short.MAX_VALUE))
             .addGroup(painel_estoqueLayout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
+
+        painel_estoqueLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAdicionar, btnPesquisar});
+
         painel_estoqueLayout.setVerticalGroup(
             painel_estoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painel_estoqueLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(painel_estoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painel_estoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPesquisar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painel_estoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(jLabel18)
-                    .addComponent(txtQtdNova, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtQtdAtual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAdicionar))
+                .addGap(16, 16, 16)
+                .addGroup(painel_estoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(painel_estoqueLayout.createSequentialGroup()
+                        .addGroup(painel_estoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(painel_estoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(painel_estoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel18)
+                            .addComponent(txtQtdNova, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtQtdAtual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(painel_estoqueLayout.createSequentialGroup()
+                        .addComponent(btnPesquisar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnAdicionar)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(84, 84, 84))
@@ -259,8 +278,13 @@ public class FormularioEstoque extends javax.swing.JDialog {
 
         painel_estoqueLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtQtdAtual, txtQtdNova});
 
+        painel_estoqueLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAdicionar, btnPesquisar});
+
         painel_guias.addTab("Dados do produto", painel_estoque);
 
+        btnNovo1.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnNovo1.setForeground(new java.awt.Color(102, 102, 102));
+        btnNovo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add1.png"))); // NOI18N
         btnNovo1.setText("NOVO");
         btnNovo1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnNovo1.addActionListener(new java.awt.event.ActionListener() {
@@ -269,6 +293,9 @@ public class FormularioEstoque extends javax.swing.JDialog {
             }
         });
 
+        btnEditar1.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnEditar1.setForeground(new java.awt.Color(102, 102, 102));
+        btnEditar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/editar.png"))); // NOI18N
         btnEditar1.setText("EDITAR");
         btnEditar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -276,6 +303,9 @@ public class FormularioEstoque extends javax.swing.JDialog {
             }
         });
 
+        btnImprimir1.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnImprimir1.setForeground(new java.awt.Color(102, 102, 102));
+        btnImprimir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/printer.png"))); // NOI18N
         btnImprimir1.setText("IMPRIMIR");
         btnImprimir1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -283,6 +313,9 @@ public class FormularioEstoque extends javax.swing.JDialog {
             }
         });
 
+        btnSalvar1.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnSalvar1.setForeground(new java.awt.Color(102, 102, 102));
+        btnSalvar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salvar.png"))); // NOI18N
         btnSalvar1.setText("SALVAR");
         btnSalvar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -290,6 +323,9 @@ public class FormularioEstoque extends javax.swing.JDialog {
             }
         });
 
+        btnExcluir1.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnExcluir1.setForeground(new java.awt.Color(102, 102, 102));
+        btnExcluir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/excluir.png"))); // NOI18N
         btnExcluir1.setText("EXCLUIR");
         btnExcluir1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -306,8 +342,8 @@ public class FormularioEstoque extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(painel_guias)
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(137, 137, 137)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnNovo1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnSalvar1)
@@ -317,7 +353,7 @@ public class FormularioEstoque extends javax.swing.JDialog {
                 .addComponent(btnExcluir1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnImprimir1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(131, 131, 131))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

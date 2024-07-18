@@ -41,10 +41,9 @@ public class FormularioLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Login");
-        setBackground(new java.awt.Color(204, 204, 204));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(102, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Noto Sans Lisu", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -65,6 +64,7 @@ public class FormularioLogin extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
+        txtEmail.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailActionPerformed(evt);
@@ -72,13 +72,16 @@ public class FormularioLogin extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
-        jLabel2.setText("E-mail");
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setText("E-mail:");
 
         jLabel3.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
-        jLabel3.setText("Senha");
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel3.setText("Senha:");
 
         btnEntrar.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
-        btnEntrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\Login_48x48.png")); // NOI18N
+        btnEntrar.setForeground(new java.awt.Color(102, 102, 102));
+        btnEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Login_48x48.png"))); // NOI18N
         btnEntrar.setText("ENTRAR");
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,7 +90,8 @@ public class FormularioLogin extends javax.swing.JFrame {
         });
 
         btnCancelar.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
-        btnCancelar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\Login_Cancel_48x48.png")); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(102, 102, 102));
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Login_Cancel_48x48.png"))); // NOI18N
         btnCancelar.setText("CANCELAR");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,23 +105,20 @@ public class FormularioLogin extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(btnCancelar))
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSenha)
+                    .addComponent(txtEmail))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCancelar, btnEntrar});
-
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -134,7 +135,7 @@ public class FormularioLogin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEntrar)
                     .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCancelar, btnEntrar});

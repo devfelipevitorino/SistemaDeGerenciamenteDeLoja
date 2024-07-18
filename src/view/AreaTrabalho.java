@@ -35,7 +35,6 @@ public class AreaTrabalho extends javax.swing.JFrame {
         painel_desktop = new javax.swing.JDesktopPane()
         ;
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         lblLogado = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -66,11 +65,13 @@ public class AreaTrabalho extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Usuário:\n", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Noto Sans Lisu", 1, 12), new java.awt.Color(102, 102, 102))); // NOI18N
+        painel_desktop.setBackground(new java.awt.Color(102, 102, 102));
 
-        jLabel1.setText("Nome:");
+        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Usuário:\n", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Noto Sans Lisu", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
+        lblLogado.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        lblLogado.setForeground(new java.awt.Color(102, 102, 102));
         lblLogado.setText("Felipe Ferreira");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -79,18 +80,14 @@ public class AreaTrabalho extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblLogado, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(652, Short.MAX_VALUE))
+                .addContainerGap(697, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(lblLogado)))
+                .addComponent(lblLogado))
         );
 
         painel_desktop.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -104,14 +101,20 @@ public class AreaTrabalho extends javax.swing.JFrame {
         painel_desktopLayout.setVerticalGroup(
             painel_desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painel_desktopLayout.createSequentialGroup()
-                .addGap(0, 451, Short.MAX_VALUE)
+                .addGap(0, 419, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\clientes.png")); // NOI18N
+        jMenu1.setBackground(new java.awt.Color(102, 102, 102));
+        jMenu1.setForeground(new java.awt.Color(102, 102, 102));
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/clientes.png"))); // NOI18N
         jMenu1.setText("Clientes");
+        jMenu1.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem1.setBackground(new java.awt.Color(102, 102, 102));
+        jMenuItem1.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jMenuItem1.setForeground(new java.awt.Color(102, 102, 102));
         jMenuItem1.setText("Formulário de Clientes");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,10 +125,16 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        menu_funcionario.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\funcionarios.png")); // NOI18N
+        menu_funcionario.setBackground(new java.awt.Color(102, 102, 102));
+        menu_funcionario.setForeground(new java.awt.Color(102, 102, 102));
+        menu_funcionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/funcionarios.png"))); // NOI18N
         menu_funcionario.setText("Funcionários");
+        menu_funcionario.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem2.setBackground(new java.awt.Color(102, 102, 102));
+        jMenuItem2.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jMenuItem2.setForeground(new java.awt.Color(102, 102, 102));
         jMenuItem2.setText("Formulário de Funcionários");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,10 +145,16 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(menu_funcionario);
 
-        menu_fornecedores.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\fornecedores.png")); // NOI18N
+        menu_fornecedores.setBackground(new java.awt.Color(102, 102, 102));
+        menu_fornecedores.setForeground(new java.awt.Color(102, 102, 102));
+        menu_fornecedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fornecedores.png"))); // NOI18N
         menu_fornecedores.setText("Fornecedores");
+        menu_fornecedores.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
 
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem3.setBackground(new java.awt.Color(102, 102, 102));
+        jMenuItem3.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jMenuItem3.setForeground(new java.awt.Color(102, 102, 102));
         jMenuItem3.setText("Formulário de Fornecedores");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,10 +165,16 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(menu_fornecedores);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\produtos.png")); // NOI18N
+        jMenu4.setBackground(new java.awt.Color(102, 102, 102));
+        jMenu4.setForeground(new java.awt.Color(102, 102, 102));
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/produtos.png"))); // NOI18N
         jMenu4.setText("Produtos");
+        jMenu4.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
 
+        jMenu8.setBackground(new java.awt.Color(102, 102, 102));
+        jMenu8.setForeground(new java.awt.Color(102, 102, 102));
         jMenu8.setText("Meus Produtos");
+        jMenu8.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
         jMenu8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu8ActionPerformed(evt);
@@ -161,6 +182,8 @@ public class AreaTrabalho extends javax.swing.JFrame {
         });
 
         menu_estoque.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        menu_estoque.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        menu_estoque.setForeground(new java.awt.Color(102, 102, 102));
         menu_estoque.setText("Cadastro de Produtos");
         menu_estoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,6 +193,8 @@ public class AreaTrabalho extends javax.swing.JFrame {
         jMenu8.add(menu_estoque);
 
         jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem4.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jMenuItem4.setForeground(new java.awt.Color(102, 102, 102));
         jMenuItem4.setText("Controle de Estoque");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,6 +204,8 @@ public class AreaTrabalho extends javax.swing.JFrame {
         jMenu8.add(jMenuItem4);
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem5.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jMenuItem5.setForeground(new java.awt.Color(102, 102, 102));
         jMenuItem5.setText("Consulta de Produtos");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,10 +218,16 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\vendas_1.png")); // NOI18N
+        jMenu5.setBackground(new java.awt.Color(102, 102, 102));
+        jMenu5.setForeground(new java.awt.Color(102, 102, 102));
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vendas_1.png"))); // NOI18N
         jMenu5.setText("Vendas");
+        jMenu5.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
 
         jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem6.setBackground(new java.awt.Color(102, 102, 102));
+        jMenuItem6.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jMenuItem6.setForeground(new java.awt.Color(102, 102, 102));
         jMenuItem6.setText("Abrir PDV");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,6 +237,9 @@ public class AreaTrabalho extends javax.swing.JFrame {
         jMenu5.add(jMenuItem6);
 
         jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem7.setBackground(new java.awt.Color(102, 102, 102));
+        jMenuItem7.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jMenuItem7.setForeground(new java.awt.Color(102, 102, 102));
         jMenuItem7.setText("Fluxo de caixa");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,6 +249,9 @@ public class AreaTrabalho extends javax.swing.JFrame {
         jMenu5.add(jMenuItem7);
 
         jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem8.setBackground(new java.awt.Color(102, 102, 102));
+        jMenuItem8.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jMenuItem8.setForeground(new java.awt.Color(102, 102, 102));
         jMenuItem8.setText("Histórico de vendas");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,10 +262,16 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu5);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\configuracoes.png")); // NOI18N
+        jMenu6.setBackground(new java.awt.Color(102, 102, 102));
+        jMenu6.setForeground(new java.awt.Color(102, 102, 102));
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/configuracoes.png"))); // NOI18N
         jMenu6.setText("Configurações");
+        jMenu6.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
 
         jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem9.setBackground(new java.awt.Color(102, 102, 102));
+        jMenuItem9.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jMenuItem9.setForeground(new java.awt.Color(102, 102, 102));
         jMenuItem9.setText("Trocar usuário");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -237,10 +282,16 @@ public class AreaTrabalho extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
-        jMenu7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\sair.png")); // NOI18N
+        jMenu7.setBackground(new java.awt.Color(102, 102, 102));
+        jMenu7.setForeground(new java.awt.Color(102, 102, 102));
+        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sair.png"))); // NOI18N
         jMenu7.setText("Sair");
+        jMenu7.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
 
         jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem10.setBackground(new java.awt.Color(102, 102, 102));
+        jMenuItem10.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
+        jMenuItem10.setForeground(new java.awt.Color(102, 102, 102));
         jMenuItem10.setText("Sair do sistema");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -389,7 +440,6 @@ public class AreaTrabalho extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;

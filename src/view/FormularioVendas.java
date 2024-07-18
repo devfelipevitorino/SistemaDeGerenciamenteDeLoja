@@ -74,6 +74,7 @@ public class FormularioVendas extends javax.swing.JFrame {
         btnPesquisar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaProduto = new javax.swing.JTable();
+        jLabel13 = new javax.swing.JLabel();
         painelDadosDoProduto = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -108,7 +109,7 @@ public class FormularioVendas extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Noto Sans Lisu", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -141,12 +142,20 @@ public class FormularioVendas extends javax.swing.JFrame {
 
         txtData.setEnabled(false);
 
+        jLabel2.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("CPF:");
 
+        jLabel3.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
         jLabel3.setText("DATA:");
 
+        jLabel4.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
         jLabel4.setText("NOME:");
 
+        jLabel5.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
         jLabel5.setText("PESQUISE UM PRDUTO:");
 
         txtPesquisaProduto.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -155,7 +164,9 @@ public class FormularioVendas extends javax.swing.JFrame {
             }
         });
 
-        btnPesquisar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\pesquisar1.png")); // NOI18N
+        btnPesquisar.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnPesquisar.setForeground(new java.awt.Color(102, 102, 102));
+        btnPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
         btnPesquisar.setText("PESQUISAR");
         btnPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,6 +197,10 @@ public class FormularioVendas extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabelaProduto);
 
+        jLabel13.setFont(new java.awt.Font("Noto Sans Lisu", 0, 8)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel13.setText("*insira dados de um cliente válido para efetuar venda!*");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -202,22 +217,25 @@ public class FormularioVendas extends javax.swing.JFrame {
                                         .addComponent(jLabel2)
                                         .addGap(20, 20, 20)
                                         .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(131, 131, 131))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel3))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtPesquisaProduto))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtNome)))
-                                .addGap(26, 26, 26)
-                                .addComponent(jLabel3))
+                                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(7, 7, 7)
-                                .addComponent(txtPesquisaProduto)))
+                                .addComponent(jLabel13)
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnPesquisar)))
-                    .addComponent(jScrollPane1))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -238,26 +256,40 @@ public class FormularioVendas extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
+                        .addComponent(btnPesquisar)
+                        .addGap(19, 19, 19))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(txtPesquisaProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(14, 14, 14))
-                    .addComponent(btnPesquisar, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtPesquisaProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addGap(18, 18, 18)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         painelDadosDoProduto.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dados do Produto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Noto Sans Lisu", 1, 12))); // NOI18N
 
+        jLabel6.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(102, 102, 102));
         jLabel6.setText("CODIGO:");
 
+        jLabel7.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(102, 102, 102));
         jLabel7.setText("PRODUTO:");
 
+        jLabel8.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(102, 102, 102));
         jLabel8.setText("PREÇO:");
 
+        jLabel9.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(102, 102, 102));
         jLabel9.setText("QUANTIDADE:");
 
+        jLabel10.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(102, 102, 102));
         jLabel10.setText("QTD. EM ESTOQUE");
 
         txtCodigo.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -284,7 +316,9 @@ public class FormularioVendas extends javax.swing.JFrame {
 
         txtQuantidade.setText("1");
 
-        btnAdicionarItem.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\add1.png")); // NOI18N
+        btnAdicionarItem.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnAdicionarItem.setForeground(new java.awt.Color(102, 102, 102));
+        btnAdicionarItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add1.png"))); // NOI18N
         btnAdicionarItem.setText("ADICIONAR");
         btnAdicionarItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -292,9 +326,13 @@ public class FormularioVendas extends javax.swing.JFrame {
             }
         });
 
+        jLabel11.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(102, 102, 102));
         jLabel11.setText("DESCONTO %");
 
-        btnLimpar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\excluir.png")); // NOI18N
+        btnLimpar.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnLimpar.setForeground(new java.awt.Color(102, 102, 102));
+        btnLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/excluir.png"))); // NOI18N
         btnLimpar.setText("LIMPAR");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -302,6 +340,9 @@ public class FormularioVendas extends javax.swing.JFrame {
             }
         });
 
+        btnPesquisarCodigo.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnPesquisarCodigo.setForeground(new java.awt.Color(102, 102, 102));
+        btnPesquisarCodigo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
         btnPesquisarCodigo.setText("PESQUISAR");
         btnPesquisarCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -349,14 +390,11 @@ public class FormularioVendas extends javax.swing.JFrame {
                                     .addComponent(txtDesconto, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
                                     .addComponent(txtQuantidade))
                                 .addGap(24, 24, 24)
-                                .addComponent(btnAdicionarItem, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnAdicionarItem, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnLimpar)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
-
-        painelDadosDoProdutoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAdicionarItem, btnLimpar});
-
         painelDadosDoProdutoLayout.setVerticalGroup(
             painelDadosDoProdutoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelDadosDoProdutoLayout.createSequentialGroup()
@@ -388,7 +426,7 @@ public class FormularioVendas extends javax.swing.JFrame {
                         .addGroup(painelDadosDoProdutoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtDesconto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel11))))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         painelDadosDoProdutoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAdicionarItem, btnLimpar});
@@ -411,7 +449,7 @@ public class FormularioVendas extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
+                .addComponent(jScrollPane3)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -431,7 +469,9 @@ public class FormularioVendas extends javax.swing.JFrame {
         txtTotalVenda.setForeground(new java.awt.Color(51, 51, 51));
         txtTotalVenda.setEnabled(false);
 
-        btnPagamento.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\pagamentos.png")); // NOI18N
+        btnPagamento.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnPagamento.setForeground(new java.awt.Color(102, 102, 102));
+        btnPagamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pagamentos.png"))); // NOI18N
         btnPagamento.setText("PAGAMENTO");
         btnPagamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -439,7 +479,9 @@ public class FormularioVendas extends javax.swing.JFrame {
             }
         });
 
-        btnCancelar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrador.DESKTOP-8COHQ5A\\Documents\\NetBeansProjects\\sistema\\SistemaDeGerenciamenteDeLoja\\sistema-estoque\\src\\main\\java\\br\\com\\sistema\\view\\img\\excluir.png")); // NOI18N
+        btnCancelar.setFont(new java.awt.Font("Noto Sans Lisu", 1, 12)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(102, 102, 102));
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/excluir.png"))); // NOI18N
         btnCancelar.setText("CANCELAR VENDA");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -496,10 +538,10 @@ public class FormularioVendas extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(painelDadosDoProduto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -752,6 +794,7 @@ public class FormularioVendas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
