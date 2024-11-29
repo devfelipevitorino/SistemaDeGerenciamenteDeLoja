@@ -11,16 +11,17 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author Administrador
  */
 public class ConexaoBancoRelatorio {
-    final private String driver = "com.mysql.jdbc.Driver";
+    final private String driver = "com.mysql.cj.jdbc.Driver";
     
-    final private String url = "jdbc:mysql://localhost/sistema";
+    final private String url = "jdbc:mysql://localhost:3306/sistema";
     final private String usuario = "root";
-    final private String senha = "";
+    final private String senha = "root";
     
     private Connection conexao;
     

@@ -15,9 +15,9 @@ import javax.swing.JOptionPane;
  */
 public class Conexaobanco {
 
-    final private String url = "jdbc:mysql://localhost/sistema";
+    final private String url = "jdbc:mysql://localhost:3306/sistema";
     final private String usuario = "root";
-    final private String senha = "";
+    final private String senha = "root";
 
     public Connection pegarConexao() {
         try {
